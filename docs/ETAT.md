@@ -49,3 +49,7 @@ Lien du pied de page, présentation sur la page Questionnaires et destination da
 ## Image de partage
 
 Image PNG de 1200 × 630, fond blanc et logo centré avec marges, dans src/images/mpghp-og.png. Configurée via seo.image dans kirigami.yaml pour les métadonnées Open Graph et Twitter générées par Kirigami.
+
+## Workflow GitHub Pages
+
+Le workflow .github/workflows/pages.yml génère, vérifie et publie dist sur GitHub Pages lors des pushes sur main ou d’un lancement manuel. Dans les paramètres du dépôt GitHub, choisir GitHub Actions comme source de Pages. Aucun push ni lancement distant effectué ici; aucun changement du domaine mpghp.ca.
