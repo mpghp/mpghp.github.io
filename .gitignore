@@ -1,0 +1,15 @@
+/node_modules/
+/dist/
+.kirigami/
+.cache.db
+.node.db
+.cookie.txt
+Thumbs.db
+.DS_Store
+
+/src/**/*.html
+/src/sitemap.xml
+/src/robots.txt
+/src/humans.txt
+/src/scripts/*.min.js
+/src/scripts/*.min.js.map

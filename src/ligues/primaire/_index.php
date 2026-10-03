@@ -1,0 +1,8 @@
+<?php
+/**
+ * @title Primaire
+ * @section ligues
+ * @abstract Faire découvrir la culture générale et le jeu d’équipe aux élèves du troisième cycle.
+ */
+?>
+<?php $ligue = trouver_ligue('primaire'); ?><section class="page-heading wrap"><p class="eyebrow">Écoles primaires</p><h1>Primaire</h1><p class="lead">Faire découvrir la culture générale et le jeu d’équipe aux élèves du troisième cycle.</p></section><section class="section wrap two-columns"><div class="prose"><h2>Votre prochain pas</h2><p>Retrouvez la présentation, les lieux de rencontre, les documents et les informations de saison sur la page actuelle de la ligue.</p><div class="notice"><strong>Choisissez la bonne saison</strong><p>Les informations de 2025–2026 restent des archives. La présence d’un formulaire ne signifie pas que les inscriptions sont ouvertes. Consultez les responsables pour les modalités actuelles.</p></div><a class="button" href="<?= h(service_url($ligue['anciennePage'])) ?>">Consulter la page actuelle ↗</a><h2>S’inscrire</h2><p>Les inscriptions sont traitées par les formulaires existants. Leur disponibilité dépend de la saison.</p><ul class="link-list"><?php foreach($ligue['formulaires'] as [$label,$chemin]): ?><li><a href="<?= h(service_url($chemin)) ?>"><?= h($label) ?> ↗</a></li><?php endforeach; ?></ul></div><aside class="callout"><p class="eyebrow">Votre équipe, vos questions</p><h2>On vous accompagne.</h2><p>Contactez les responsables pour les modalités actuelles.</p><a class="text-link" href="mailto:<?= h($ligue['courriel']) ?>"><?= h($ligue['courriel']) ?></a><p><a href="<?= h($relroot) ?>ligues/">← Toutes les ligues</a></p></aside></section>

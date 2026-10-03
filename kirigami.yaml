@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://cdn.jsdelivr.net/gh/php-kirigami/kirigami@main/packages/kirigami/kirigami.schema.json
+kirigami:
+  project: MPGHP
+  root: src
+  baseurl: https://mpghp.github.io
+  author: Mouvement provincial Génies en herbe / Pantologie
+  description: Découvrir Génies en herbe, trouver sa ligue et vivre la culture générale en équipe.
+prepros:
+  before: _layouts/header.php
+  after: _layouts/footer.php
+  includes: [_lib/functions.php]
+  format: true
+seo:
+  favicon: images/favicon.svg
+  image: images/mpghp-og.png
+export:
+  path: dist
+studio:
+  include:
+    - path: src/_data/site.json
+      label: Contenu et services
+tasks:
+  - name: interactions
+    type: esbuild
+    entry: scripts/site.js

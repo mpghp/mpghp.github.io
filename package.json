@@ -1,0 +1,22 @@
+{
+  "name": "mpghp-site",
+  "private": true,
+  "type": "module",
+  "description": "Site du Mouvement provincial Génies en herbe / Pantologie",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.2.3"
+  },
+  "scripts": {
+    "serve": "kiri serve",
+    "build": "kiri build",
+    "watch": "kiri watch",
+    "export": "kiri export",
+    "verifier": "node scripts/verifier.mjs",
+    "test": "node --test scripts/interactions.test.mjs"
+  },
+  "devDependencies": {
+    "@kirigami/cli": "^0.1.17",
+    "@kirigami/kirigami": "^3.2.10"
+  }
+}

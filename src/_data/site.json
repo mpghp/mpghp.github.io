@@ -1,0 +1,131 @@
+{
+  "services": {
+    "ancienSite": "https://mpghp.ca",
+    "commande": "/content/commande-de-questionnaires",
+    "contact": "/contact"
+  },
+  "ligues": [
+    {
+      "slug": "primaire",
+      "nom": "Primaire",
+      "public": "Écoles primaires",
+      "type": "scolaire",
+      "accroche": "Les premières découvertes",
+      "texte": "Faire découvrir la culture générale et le jeu d’équipe aux élèves du troisième cycle.",
+      "anciennePage": "/content/primaire",
+      "courriel": "primaire@mpghp.ca",
+      "formulaires": [
+        [
+          "Inscription au primaire",
+          "/content/inscription-primaire"
+        ]
+      ]
+    },
+    {
+      "slug": "secondaire",
+      "nom": "Secondaire",
+      "public": "Écoles secondaires",
+      "type": "scolaire",
+      "accroche": "La curiosité en compétition",
+      "texte": "Représenter son école et rencontrer d’autres équipes au fil de la saison.",
+      "anciennePage": "/content/secondaire",
+      "courriel": "info@mpghp.ca",
+      "formulaires": [
+        [
+          "Inscription d’une école secondaire",
+          "/content/inscription-ecole-secondaire"
+        ],
+        [
+          "Alignement d’équipe",
+          "/content/alignement-equipe-secondaire"
+        ]
+      ]
+    },
+    {
+      "slug": "civile-a",
+      "nom": "Civile A · Montréal",
+      "public": "Adultes, cégeps et universités",
+      "type": "adulte",
+      "accroche": "Continuer à jouer",
+      "texte": "Poursuivre l’aventure après le secondaire, dans une division régulière ou collégiale et universitaire.",
+      "anciennePage": "/content/ligue-civile-de-montreal",
+      "courriel": "info@mpghp.ca",
+      "formulaires": [
+        [
+          "Inscription à la Civile A · 2026–2027",
+          "/content/formulaire-dinscription-licam-2026-2027"
+        ]
+      ]
+    },
+    {
+      "slug": "civile-b",
+      "nom": "Civile B",
+      "public": "Adultes",
+      "type": "adulte",
+      "accroche": "Disponibilité à confirmer",
+      "texte": "Cette offre n’apparaît plus dans les inscriptions actuelles. Contactez le Mouvement pour confirmer les possibilités de participation.",
+      "anciennePage": "/contact",
+      "courriel": "info@mpghp.ca",
+      "formulaires": [
+        [
+          "Demander des renseignements",
+          "/contact"
+        ]
+      ]
+    },
+    {
+      "slug": "virtuelle",
+      "nom": "Ligue virtuelle",
+      "public": "À distance",
+      "type": "distance",
+      "accroche": "Le jeu, où que vous soyez",
+      "texte": "Découvrir les possibilités de participation à distance et les modalités présentées par les responsables.",
+      "anciennePage": "/content/ligue-virtuelle",
+      "courriel": "info@mpghp.ca",
+      "formulaires": [
+        [
+          "Choisir son formulaire",
+          "/content/inscription"
+        ]
+      ]
+    }
+  ],
+  "ressources": [
+    {
+      "titre": "Découvrir Génies en herbe",
+      "type": "guide",
+      "texte": "Les bases du jeu, l’équipe et le déroulement d’un match.",
+      "url": "decouvrir/"
+    },
+    {
+      "titre": "Guide pour jouer",
+      "type": "document",
+      "texte": "Le guide publié en 2016. Confirmer les règles de la saison avec les responsables.",
+      "url": "https://mpghp.ca/sites/mpghp.ca/files/guide_-_jouer_a_genies_en_herbe_0.pdf"
+    },
+    {
+      "titre": "Démarrer une équipe",
+      "type": "guide",
+      "texte": "Les premières étapes pour rassembler un groupe.",
+      "url": "commencer/"
+    },
+    {
+      "titre": "Règlements généraux",
+      "type": "document",
+      "texte": "Documents de gouvernance disponibles sur le site actuel.",
+      "url": "https://mpghp.ca/content/reglements-generaux"
+    },
+    {
+      "titre": "États financiers",
+      "type": "document",
+      "texte": "Consulter la documentation financière du Mouvement.",
+      "url": "https://mpghp.ca/content/etats-financiers"
+    },
+    {
+      "titre": "Questionnaires",
+      "type": "questionnaire",
+      "texte": "Les séries et le service de commande actuel.",
+      "url": "questionnaires/"
+    }
+  ]
+}

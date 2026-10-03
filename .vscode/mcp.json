@@ -1,0 +1,13 @@
+{
+    "servers": {
+        "kirigami": {
+            "type": "stdio",
+            "command": "node",
+            "args": [
+                "node_modules/@kirigami/cli/bin/kiri.js",
+                "mcp"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    }
+}
