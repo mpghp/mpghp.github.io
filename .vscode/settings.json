@@ -24,5 +24,8 @@
     "folder-path-color.folders": [
         { "path": "src", "color": "cyan" },
         { "path": "assets", "color": "magenta" }
+    ],
+    "yaml.disableSchemaDetection": [
+        "file:///c%3A/projects/mpghp/mpghp.github.io/src/_data/site.yaml"
     ]
 }

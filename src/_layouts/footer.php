@@ -1,1 +1,33 @@
-</main><footer class="site-footer"><div class="wrap footer-grid"><div><a class="brand" href="<?= h($relroot) ?>" aria-label="MPGHP — Accueil"><img class="brand-logo" src="<?= h($relroot) ?>images/mpghp-logo.png" alt="Génies en herbe / Pantologie" width="193" height="103" loading="lazy"></a><p>Un mouvement pour apprendre,<br>jouer et grandir ensemble.</p><p class="footer-small">Mouvement provincial Génies en herbe / Pantologie</p></div><div><h2>À vous de jouer</h2><a href="<?= h($relroot) ?>participer/">Trouver ma ligue</a><a href="<?= h($relroot) ?>commencer/">Démarrer une équipe</a><a href="<?= h($relroot) ?>questionnaires/">Commander des questionnaires</a></div><div><h2>Le Mouvement</h2><a href="<?= h($relroot) ?>mouvement/">Notre histoire</a><a href="<?= h($relroot) ?>nouvelles/">Nouvelles et archives</a><a href="<?= h($relroot) ?>contact/">Nous joindre</a></div></div><div class="wrap footer-bottom"><span>© <?= date('Y') ?> MPGHP</span><span>La connaissance se partage. Le plaisir aussi.</span><a href="https://github.com/php-kirigami/kirigami">Réalisé avec Kirigami</a></div></footer></body></html>
+<?php
+/**
+ * prepros.after : pied de page et fermeture du document.
+ */
+$pied = site()->pied;
+?>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap site-footer__grid">
+            <div>
+                <a class="brand" href="<?php echo $relroot; ?>" aria-label="MPGHP — Accueil">
+                    <img src="<?php echo $relroot; ?>images/mpghp-logo.png" alt="Génies en herbe / Pantologie" width="193" height="103" loading="lazy">
+                </a>
+                <p><?php echo e($pied->slogan); ?></p>
+                <p class="site-footer__small"><?php echo e($pied->mention); ?></p>
+            </div>
+            <?php foreach ($pied->colonnes as $column): ?>
+                <nav aria-label="<?php echo e($column->titre); ?>">
+                    <h2><?php echo e($column->titre); ?></h2>
+                    <?php foreach ($column->liens as $link): ?>
+                        <a href="<?php echo $relroot . e($link->path); ?>"><?php echo e($link->label); ?></a>
+                    <?php endforeach; ?>
+                </nav>
+            <?php endforeach; ?>
+        </div>
+        <div class="wrap site-footer__bottom">
+            <span>© <year></year> MPGHP</span>
+            <span><?php echo e($pied->devise); ?></span>
+            <a href="https://github.com/php-kirigami/kirigami">Réalisé avec Kirigami</a>
+        </div>
+    </footer>
+</body>
+</html>

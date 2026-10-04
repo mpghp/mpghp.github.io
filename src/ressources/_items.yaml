@@ -1,0 +1,32 @@
+# Ressources affichées sur la page. `categorie` : guide, document ou questionnaire.
+# Un lien relatif part du dossier ressources/ ; un document externe commence par https://.
+
+- titre: Découvrir Génies en herbe
+  categorie: guide
+  texte: Les bases du jeu, l’équipe et le déroulement d’un match.
+  lien: ../decouvrir/
+
+- titre: Guide pour jouer
+  categorie: document
+  texte: Le guide publié en 2016. Confirmer les règles de la saison avec les responsables.
+  lien: https://mpghp.ca/sites/mpghp.ca/files/guide_-_jouer_a_genies_en_herbe_0.pdf
+
+- titre: Démarrer une équipe
+  categorie: guide
+  texte: Les premières étapes pour rassembler un groupe.
+  lien: ../commencer/
+
+- titre: Règlements généraux
+  categorie: document
+  texte: Documents de gouvernance disponibles sur le site actuel.
+  lien: https://mpghp.ca/content/reglements-generaux
+
+- titre: États financiers
+  categorie: document
+  texte: Consulter la documentation financière du Mouvement.
+  lien: https://mpghp.ca/content/etats-financiers
+
+- titre: Questionnaires
+  categorie: questionnaire
+  texte: Les séries et le service de commande actuel.
+  lien: ../questionnaires/

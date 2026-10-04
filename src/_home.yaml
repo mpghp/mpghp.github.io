@@ -1,0 +1,67 @@
+# Textes de la page d'accueil. Les liens sont relatifs à la racine du site.
+# Dans les titres, *mot* met un mot en évidence.
+
+surtitre: Le jeu-questionnaire qui nous rassemble
+titre: Génies en herbe
+devise: L’œil de la connaissance ouvert sur le monde
+mention: Mouvement provincial Génies en herbe / Pantologie
+
+accroche:
+  surtitre: Curieux de nature. Joueurs d’équipe.
+  titre: Quatre joueurs, un buzzer et *toutes les questions* du monde.
+  texte: >-
+    À l’école ou entre passionnés, on répond vite, on apprend beaucoup et on
+    joue ensemble. Bienvenue dans le mouvement Génies en herbe / Pantologie.
+  principal: { label: Découvrir le jeu ↗, lien: decouvrir/ }
+  secondaire: { label: Trouver ma ligue →, lien: ligues/ }
+
+manches:
+  surtitre: Le premier point, c’est de se lancer.
+  titre: Entrez dans le jeu.
+  liste:
+    - surtitre: Première manche
+      titre: Découvrir.
+      texte: >-
+        Des équipes, un animateur, des questions sur tous les sujets. Les bases
+        pour comprendre le jeu et prendre goût au prochain match.
+      label: C’est quoi, Génies en herbe?
+      lien: decouvrir/
+    - surtitre: Deuxième manche
+      titre: Trouver son équipe.
+      texte: >-
+        Au primaire, au secondaire ou après les études : découvrez les ligues
+        et le parcours qui vous ressemble.
+      label: Voir les ligues
+      lien: ligues/
+    - surtitre: Troisième manche
+      titre: S’entraîner.
+      texte: >-
+        De l’histoire aux sciences, préparez votre équipe avec les guides et le
+        service de commande de questionnaires.
+      label: Les questionnaires
+      lien: questionnaires/
+    - surtitre: À vous de jouer
+      titre: Faire le premier pas.
+      texte: >-
+        Rassemblez un groupe curieux, trouvez un responsable et découvrez les
+        possibilités de participation.
+      label: Démarrer une équipe
+      lien: commencer/
+
+ligues:
+  surtitre: Choisissez votre terrain de jeu
+  titre: Les ligues.
+  lien: Explorer tous les parcours →
+
+nouvelles:
+  surtitre: Le fil du Mouvement
+  titre: À suivre.
+  liens:
+    - { label: Calendrier et résultats →, lien: calendrier/ }
+    - { label: Guides et documents →, lien: ressources/ }
+
+conclusion:
+  surtitre: Pas besoin de tout savoir pour jouer.
+  texte: La connaissance de *tout.* En équipe.
+  label: Entrer en jeu ↗
+  lien: participer/

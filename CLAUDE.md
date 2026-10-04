@@ -1,22 +1,52 @@
-# Projet MPGHP
+# CLAUDE.md
 
-Site du Mouvement provincial Génies en herbe / Pantologie, réalisé avec Kirigami. Le dépôt était vide au début de la refonte du 3 octobre 2026.
+Site du Mouvement provincial Génies en herbe / Pantologie (MPGHP), construit avec
+[Kirigami](https://github.com/php-kirigami/kirigami) : des gabarits PHP et des pages
+Markdown compilés en HTML statique par PHP-WASM dans Node. Les sources vivent dans `src/`
+(`kirigami.root`), la configuration unique est `kirigami.yaml`.
 
-## Documentation à lire
+Le détail évolutif est dans `docs/`, un fichier par sujet :
 
-- [Audit du site actuel](docs/AUDIT.md) : contenus, parcours, services et limites de la vérification.
-- [Refonte et design](docs/REFONTE.md) : architecture, direction graphique et migration.
-- [Intégration de GEHGen](docs/GEHGEN.md) : capacités vérifiées, propositions et contrat à construire.
-- [État du projet](docs/ETAT.md) : ce qui fonctionne et ce qui reste à faire.
+| Fichier | Contenu |
+|---|---|
+| [docs/STRUCTURE.md](docs/STRUCTURE.md) | Organisation des sources, types de page, annotations, données |
+| [docs/STUDIO.md](docs/STUDIO.md) | Ce que les propriétaires du site modifient dans Kiri Studio |
+| [docs/REFONTE.md](docs/REFONTE.md) | Objectifs, parcours, direction graphique, migration et publication |
+| [docs/AUDIT.md](docs/AUDIT.md) | Audit du site actuel (mpghp.ca) |
+| [docs/GEHGEN.md](docs/GEHGEN.md) | Intégration possible de GEHGen (application séparée) |
+| [docs/STATUS.md](docs/STATUS.md) | Ce qui est livré et vérifié |
+| [docs/TODO.md](docs/TODO.md) | Ce qui reste à faire avant publication |
 
-## Organisation
+## Conventions non négociables
 
-`kirigami.yaml` configure la génération. `src/_data/site.json` contient les ligues, ressources et liens vers les services existants. Les sources des pages sont les `src/**/_index.php`; les layouts communs vivent dans `src/_layouts/`. Les fonctions communes sont dans `src/_lib/functions.php`. Le JavaScript est compil? par la t?che esbuild de Kirigami. Le CSS et le JavaScript sont servis localement, sans framework ni ressource tierce dans le navigateur.
+- **Langue** : le site et sa documentation sont en français (exception demandée par le
+  responsable du projet). Les identifiants imposés par Kirigami restent en anglais.
+  Parler au responsable en français.
+- **Contenu en Markdown, sans HTML brut** : un auteur écrit un `_index.md`, pas du HTML.
+  Une mise en page répétée devient un type de page, un shortcode ou un composant dans
+  `src/_lib/`, jamais du balisage copié d'une page à l'autre.
+- **Pas de `style=""`**, tailles en `rem`/`em` (jamais `px` pour les polices et les
+  espacements), pseudo-éléments (`::before`/`::after`) plutôt que du balisage décoratif.
+- **Liens relatifs** : `$relroot` dans les gabarits, `../page/` dans le Markdown. Le domaine
+  n'apparaît que dans `baseurl`.
+- **Indentation de 4 espaces** (voir `.editorconfig`), tabulations interdites.
+- **Rester léger** : aucune dépendance sans nécessité.
+- Ne jamais modifier à la main les HTML générés (`src/**/index.html`, `dist/`).
+- Aucune donnée privée de GEHGen dans ce dépôt public. Aucun déploiement, changement de
+  domaine (`mpghp.ca`) ni CNAME sans instruction explicite.
+- Ne pas publier de tarifs, dates ou inscriptions ouvertes sans confirmation de la saison.
 
 ## Commandes
 
-`npm install`, `npm run serve`, `npm run export`, `npm run verifier`, `npm test`. Node 24+ requis. L’export `dist/` est généré et ignoré par Git. Les configurations MCP lancent la CLI installée localement; ouvrir le dépôt racine dans le client AI.
+`npm install`, `npm run serve` (aperçu), `npm run export` (génère `dist/`),
+`npm run verifier` (liens, h1, erreurs PHP : après l'export), `npm test` (scripts du navigateur).
+Node 24+. Les configurations MCP lancent la CLI installée localement.
 
-## Publication
+Pour les API exactes, lire les README installés : `node_modules/@kirigami/php-prepros/README.md`
+(pages, annotations, types, tags), `node_modules/@kirigami/kirigami/README.md` (`kirigami.yaml`,
+Studio), `node_modules/@kirigami/canva/README.md` (jetons de design, prose).
 
-La base de prévisualisation est `https://mpghp.github.io`. `mpghp.ca` reste le site existant. Ne pas ajouter de CNAME ou basculer ce domaine avant d’avoir préservé l’accès aux services dynamiques. Les liens utilisent `$relroot`; échapper les données avec `h()`.
+## Avant de travailler
+
+1. Lire `docs/STATUS.md` et `docs/TODO.md`.
+2. En fin de tâche : consigner le livré dans `STATUS.md`, retirer de `TODO.md` ce qui est fait.

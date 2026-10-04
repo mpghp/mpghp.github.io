@@ -1,0 +1,63 @@
+// Composants des listes : filtre, cartes, nouvelles.
+
+.filter-controls {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    label { display: grid; gap: 0.45rem; min-width: 15rem; font-size: 0.85rem; }
+
+    input, select {
+        width: 100%;
+        min-height: 3rem;
+        padding: 0.75rem;
+        border: 1px solid #93998d;
+        border-radius: 0;
+        background: transparent;
+        color: var(--ink);
+    }
+
+    @media (max-width: 40rem) { display: grid; gap: 1rem; label { min-width: 0; } }
+}
+
+.filter-status { margin-block: 0 1.2rem; color: var(--ink-muted); font-size: 0.75rem; }
+
+// Une carte est un article (ligue) ou un lien entier (ressource).
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 17rem;
+    padding-block: 1.7rem;
+    border-top: 2px solid var(--ink);
+    text-decoration: none;
+
+    h2 { margin-bottom: 1rem; font-size: 1.9rem; }
+    h2 a { display: flex; justify-content: space-between; gap: 0.6rem; text-decoration: none; }
+    p:not(.eyebrow) { color: var(--ink-muted); font-size: 0.9rem; }
+
+    &__foot {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+}
+
+.news-list article {
+    max-width: 52rem;
+    padding-block: 2rem;
+    border-top: 1px solid var(--border);
+
+    h2 { font-size: 2rem; }
+    h2 a { text-decoration: none; }
+    p:not(.eyebrow) { color: var(--ink-muted); }
+}

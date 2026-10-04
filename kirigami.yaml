@@ -1,25 +1,61 @@
 # yaml-language-server: $schema=https://cdn.jsdelivr.net/gh/php-kirigami/kirigami@main/packages/kirigami/kirigami.schema.json
+
 kirigami:
   project: MPGHP
   root: src
   baseurl: https://mpghp.github.io
   author: Mouvement provincial Génies en herbe / Pantologie
   description: Découvrir Génies en herbe, trouver sa ligue et vivre la culture générale en équipe.
-prepros:
-  before: _layouts/header.php
-  after: _layouts/footer.php
-  includes: [_lib/functions.php]
-  format: true
+
 seo:
   favicon: images/favicon.svg
   image: images/mpghp-og.png
-export:
-  path: dist
-studio:
-  include:
-    - path: src/_data/site.json
-      label: Contenu et services
+  lang: fr-CA
+
+prepros:
+  before: _layouts/header.php
+  after: _layouts/footer.php
+  format: true
+  includes: [_lib/site.php, _lib/components.php, _lib/shortcodes.php]
+  types:
+    page:
+      before: _layouts/types/page.before.php
+      after: _layouts/types/page.after.php
+    home:
+      before: _layouts/types/home.before.php
+
+sass:
+  style: expanded
+
 tasks:
-  - name: interactions
+  - name: css
+    type: sass
+    entry: styles/site.scss
+  - name: js
     type: esbuild
     entry: scripts/site.js
+
+export:
+  path: dist
+
+studio:
+  types: [page]
+  pageMedia: [images, files]
+  include:
+    - path: src/_data/site.yaml
+      label: Réglages du site
+    - path: src/ligues/*/_index.md
+      label: Ligues
+      create: true
+      header:
+        eyebrow: ""
+        group: scolaire
+        tagline: ""
+        abstract: ""
+    - path: src/nouvelles/*/_index.md
+      label: Nouvelles
+      create: true
+      header:
+        date: today
+        eyebrow: Nouvelle
+        abstract: ""

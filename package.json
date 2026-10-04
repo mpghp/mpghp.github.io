@@ -16,6 +16,7 @@
     "test": "node --test scripts/interactions.test.mjs"
   },
   "devDependencies": {
+    "@kirigami/canva": "^2.7.0",
     "@kirigami/cli": "^0.1.17",
     "@kirigami/kirigami": "^3.2.10"
   }

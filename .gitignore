@@ -13,3 +13,5 @@ Thumbs.db
 /src/humans.txt
 /src/scripts/*.min.js
 /src/scripts/*.min.js.map
+/src/styles/*.min.css
+/src/styles/*.min.css.map

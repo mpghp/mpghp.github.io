@@ -1,0 +1,37 @@
+# Réglages communs : navigation, avis de saison et pied de page.
+# Les chemins sont relatifs à la racine du site.
+
+navigation:
+  - { label: Découvrir, path: decouvrir/ }
+  - { label: Les ligues, path: ligues/ }
+  - { label: Questionnaires, path: questionnaires/ }
+  - { label: Ressources, path: ressources/ }
+  - { label: Le Mouvement, path: mouvement/ }
+
+action:
+  label: Participer ↗
+  path: participer/
+
+saison:
+  titre: Choisissez la bonne saison
+  texte: >-
+    Les informations de 2025–2026 restent des archives. La présence d’un
+    formulaire ne signifie pas que les inscriptions sont ouvertes. Consultez
+    les responsables pour les modalités actuelles.
+
+pied:
+  slogan: Un mouvement pour apprendre, jouer et grandir ensemble.
+  mention: Mouvement provincial Génies en herbe / Pantologie
+  devise: La connaissance se partage. Le plaisir aussi.
+  colonnes:
+    - titre: À vous de jouer
+      liens:
+        - { label: Trouver ma ligue, path: participer/ }
+        - { label: Démarrer une équipe, path: commencer/ }
+        - { label: Commander des questionnaires, path: questionnaires/ }
+    - titre: Le Mouvement
+      liens:
+        - { label: Notre histoire, path: mouvement/ }
+        - { label: Nouvelles et archives, path: nouvelles/ }
+        - { label: Calendrier et résultats, path: calendrier/ }
+        - { label: Nous joindre, path: contact/ }

@@ -1,0 +1,183 @@
+// Éléments de base, typographie et utilitaires communs.
+
+@use "@kirigami/canva/prose";
+
+:root {
+    --green: #75d52e;
+    --green-soft: #d3edbe;
+    --cyan-deep: #00627d;
+    --measure: 75rem;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.65;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    line-height: 1.07;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.3em;
+
+    &:hover { color: var(--accent); }
+}
+
+button, input, select { font: inherit; }
+
+[hidden] { display: none !important; }
+
+:focus-visible {
+    outline: 0.2rem solid var(--accent);
+    outline-offset: 0.3rem;
+}
+
+::selection { background: #bbef95; }
+
+.wrap {
+    width: min(100% - 3rem, var(--measure));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: clamp(2.5rem, 5vw, 4.5rem);
+
+    // Page sans texte : seule la liste (@list) s'affiche.
+    &:has(> .prose:empty):not(.section--split) { display: none; }
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -6rem;
+    z-index: 10;
+    padding: 0.75rem;
+    background: var(--ink);
+    color: #fff;
+
+    &:focus { top: 0.75rem; }
+}
+
+.eyebrow {
+    margin-bottom: 1.2rem;
+    color: var(--ink-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lead {
+    max-width: 44rem;
+    color: var(--ink-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.text-link {
+    display: block;
+    margin-bottom: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+// Bouton : un lien ordinaire, mis en forme par sa classe.
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-decoration: none;
+
+    &:hover {
+        border-color: var(--cyan-deep);
+        background: var(--cyan-deep);
+        color: #fff;
+    }
+
+    &--small { padding: 0.75rem 1rem; font-size: 0.75rem; }
+
+    &--outline {
+        border-color: var(--border);
+        background: transparent;
+        color: var(--ink);
+
+        &:hover { border-color: var(--ink); background: var(--surface); color: var(--ink); }
+    }
+}
+
+// Texte rédigé en Markdown : le dernier lien seul sur sa ligne devient un bouton.
+.prose {
+    max-width: 46rem;
+
+    h2 { font-size: 1.9rem; margin-block: 2.4rem 1.2rem; }
+    h2:first-child { margin-top: 0; }
+
+    p > a:only-child {
+        display: inline-flex;
+        padding: 0.8rem 1.25rem;
+        background: var(--accent);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 650;
+        text-decoration: none;
+
+        &:hover { background: var(--cyan-deep); }
+    }
+
+    p > a[href^="mailto:"]:only-child:first-child { font-size: 1.1rem; }
+}
+
+// Avis de saison ({% saison %}).
+.notice {
+    margin-block: 1.5rem;
+    padding: 1.5rem 1.75rem;
+    border-left: 0.2rem solid var(--accent);
+    background: var(--surface);
+
+    p { margin: 0; color: var(--ink-muted); font-size: 0.9rem; }
+}
+
+// Colonne latérale : un paragraphe suivi d'un titre est une rubrique, un lien final est un bouton.
+.callout {
+    align-self: start;
+    padding: 2.2rem;
+    border-top: 0.25rem solid var(--accent);
+    background: var(--surface);
+
+    > p:has(+ h2) {
+        margin-bottom: 1rem;
+        color: var(--ink-muted);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    h2 { margin-block: 0 1rem; font-size: 2rem; }
+    p { font-size: 0.9rem; }
+
+    p:last-child > a {
+        display: inline-flex;
+        padding: 0.8rem 1.25rem;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 650;
+        text-decoration: none;
+
+        &:hover { background: var(--cyan-deep); }
+    }
+}

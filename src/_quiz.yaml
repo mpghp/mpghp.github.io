@@ -1,0 +1,11 @@
+# Question de démonstration de l'accueil. La réponse doit être l'un des choix.
+
+etiquette: À vous de jouer
+categorie: Sciences · Démonstration
+question: Quel est le symbole chimique de l’or?
+consigne: Une question. Quatre réponses. Faites votre choix.
+choix: [Or, Ag, Au, Go]
+reponse: Au
+depart: À votre tour!
+bravo: Bien joué! Au vient du latin aurum. À vous le prochain point.
+perdu: La bonne réponse est Au, du latin aurum. Une découverte de plus!

@@ -1,0 +1,18 @@
+// Jetons de design : palette cyan, vert et blanc du logo, titres à empattement.
+// Chaque valeur remplace un défaut de @kirigami/canva et devient une propriété CSS (--bg, --accent…).
+
+@forward "@kirigami/canva/conf" with (
+    $bg:              #f4f3ef,
+    $surface:         #e6e7e0,
+    $surface-2:       #ffffff,
+    $border:          #cfcec7,
+    $ink:             #20211e,
+    $ink-muted:       #60645e,
+    $accent:          #007fa3,
+    $accent-soft:     #e7f6fc,
+
+    $font-base:       16,
+    $font-min:        15,
+    $font-body:       (system-ui, -apple-system, "Segoe UI", sans-serif),
+    $font-heading:    (Georgia, "Times New Roman", serif),
+);

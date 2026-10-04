@@ -1,0 +1,8 @@
+// Point d'entrée de la tâche `css` → styles/site.min.css
+// `conf` d'abord : polices, propriétés :root et réinitialisation.
+
+@use "partials/conf";
+@use "partials/base";
+@use "partials/layout";
+@use "partials/components";
+@use "partials/home";

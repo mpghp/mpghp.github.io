@@ -1,4 +1,14 @@
-<?php /**
+<?php
+/**
  * @title Page introuvable
+ * @type page
  * @robots noindex
- */ ?><section class="page-heading wrap"><p class="eyebrow">Erreur 404</p><h1>Cette piste<br>ne mène nulle part.</h1><p class="lead">Retrouvez votre chemin vers les ligues et les ressources.</p></section><section class="wrap section"><a class="button" href="<?= h($relroot) ?>">Retour à l’accueil →</a></section>
+ * @base true
+ * @eyebrow Erreur 404
+ * @heading Cette piste ne mène nulle part.
+ * @abstract Retrouvez votre chemin vers les ligues et les ressources.
+ */
+?>
+<markdown>
+[Retour à l’accueil →](<?php echo $baseurl; ?>/)
+</markdown>

@@ -1,6 +1,7 @@
-# Nouveau site MPGHP
+# Site du MPGHP
 
-Première proposition de refonte du site du Mouvement provincial Génies en herbe / Pantologie. Le site et sa documentation sont entièrement en français et utilisent Kirigami.
+Proposition de refonte du site du Mouvement provincial Génies en herbe / Pantologie, construite
+avec Kirigami. Le site et sa documentation sont en français.
 
 ## Prévisualiser
 
@@ -9,7 +10,8 @@ npm install
 npm run serve
 ```
 
-Ouvrir l’adresse affichée par Kirigami, normalement `http://127.0.0.1:4321`. Pour préparer une version statique :
+Ouvrir l'adresse affichée par Kirigami (normalement `http://127.0.0.1:4321`). Pour une version
+statique et ses vérifications :
 
 ```powershell
 npm run export
@@ -17,24 +19,20 @@ npm run verifier
 npm test
 ```
 
-## Ce qui est inclus
+## Modifier le contenu
 
-Accueil, découverte, quatre ligues présentes sur le site actuel et une fiche Civile B à confirmer, participation, démarrage d’équipe, calendrier et résultats, ressources, questionnaires, Mouvement, nouvelles historiques, contact et page 404. Navigation adaptable au mobile, filtres de ligues et de ressources, liens d’inscription et de commande existants, métadonnées et plan du site.
+Chaque page est un `_index.md` dans `src/` : un en-tête (`@title`, `@eyebrow`, `@heading`,
+`@abstract`) suivi de texte en Markdown. Les ligues (`src/ligues/*/`) et les nouvelles
+(`src/nouvelles/*/`) sont des dossiers qu'on peut ajouter ou supprimer. Les réglages communs
+sont dans `src/_data/site.yaml`, les textes de l'accueil dans `src/_home.yaml`. Voir
+[docs/STRUCTURE.md](docs/STRUCTURE.md) et [docs/STUDIO.md](docs/STUDIO.md).
 
-Le design s’inspire du PDF de référence fourni : grand titre de revue, typographie à empattements, manches numérotées, accents cyan et vert, et question interactive de démonstration. Les photos officielles restent à fournir.
-
-## Contenu et services
-
-Modifier les ligues, les ressources et les destinations des services dans [src/_data/site.json](src/_data/site.json). Les inscriptions, le contact par formulaire et les commandes continuent d’être traités sur le site actuel. Aucun paiement, compte d’école ni formulaire de saisie personnelle n’est implanté dans cette vitrine.
-
-La saison 2025–2026 est présentée comme historique. Les événements, tarifs et annonces de la nouvelle saison attendent confirmation; aucun calendrier fictif n’est publié.
-
-## GEHGen
-
-La [feuille de route GEHGen](docs/GEHGEN.md) propose catalogue, entraînements, livraison privée et outils d’équipe. L’application privée des rédacteurs n’est pas référencée dans les pages publiques; aucune API ni banque privée n’est copiée dans le site.
+Les inscriptions, le contact et les commandes restent traités par le site actuel (`mpghp.ca`) :
+cette vitrine ne collecte ni paiement ni donnée personnelle.
 
 ## Documentation
 
-[Audit](docs/AUDIT.md) · [Refonte](docs/REFONTE.md) · [GEHGen](docs/GEHGEN.md) · [État du projet](docs/ETAT.md).
+[Structure](docs/STRUCTURE.md) · [Studio](docs/STUDIO.md) · [Refonte](docs/REFONTE.md) ·
+[Audit](docs/AUDIT.md) · [GEHGen](docs/GEHGEN.md) · [État](docs/STATUS.md) · [À faire](docs/TODO.md)
 
-La publication et la migration du domaine restent à préparer. Consulter la procédure de bascule avant tout déploiement.
+La publication et la migration du domaine restent à préparer (voir `docs/REFONTE.md`).
